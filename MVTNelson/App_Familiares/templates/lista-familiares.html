@@ -1,17 +1,96 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MVTNelson</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#!">NUESTRO PRIMER MVT</a>
+                <a class="btn btn-primary" href="#signup">Nelson Salazar</a>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <!-- Page heading-->
+                            <h1 class="mb-5">Mi familia!</h1>
+                            <h3 class="mb-5">Web que permite ver los datos de mis familiares, guardados en una BD</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Icons Grid-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
 
-    <ul>
-        {% for familiar in lista_familiares %}
-            <li>{{familiar.nombre}}, edad {{familiar.edad}} años. Fecha nacimiento: {{familiar.fecha_nacimiento}}</li>
-        {% endfor %}
-    </ul>
-    
-</body>
+                    {% for familiar in lista_familiares %}
+
+                        <div class="col-lg-4">
+                            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                                <div class="features-icons-icon d-flex"><i class="bi-person-square m-auto text-primary"></i></div>
+                                <h3>{{familiar.nombre}}</h3>
+                                <p class="lead mb-0">Edad: {{familiar.edad}} años.</p>
+                                <p class="lead mb-0">Fecha de nacimiento: {{familiar.fecha_nacimiento}}</p>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+        <hr/>
+        <!-- Footer-->
+        <footer class="footer bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Mi primer MVT Nelson Salazar 2022. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>
